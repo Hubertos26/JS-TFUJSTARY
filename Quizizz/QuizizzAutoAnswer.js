@@ -1,13 +1,13 @@
 if (window.location.href.search("quizizz.com/join/game/") == -1 && window.location.href.search("gameType=") == -1) {
     if (window.location.href.search("quizizz.com/join/pre-game/") != -1) {
-        alert("You cannot execute this while paused. If you are not paused please DM East_Arctica#9238 on discord!")
-        throw new Error("You cannot execute this while paused. If you think this is an error please DM East_Arctica#9238 on discord!");
+        alert("Nie możesz użyć... Gra jest wstrzymana!")
+        throw new Error("Nie możesz użyć... Gra jest wstrzymana!");
     } else if (window.location.href.search("quizizz.com/join/quiz/") != -1) {
-        alert("You need to start the game before running this script. If you think this is an error please DM East_Arctica#9238 on discord!")
-        throw new Error("You need to start the game before running this script. If you think this is an error please DM East_Arctica#9238 on discord!");
+        alert("Musisz wystartować grę zanim tego użyjesz!")
+        throw new Error("Musisz wystartować grę zanim tego użyjesz!");
     } else {
         alert("You aren't on a quizizz quiz. If you think this is an error please DM East_Arctica#9238 on discord!")
-        throw new Error("You aren't on a quizizz quiz. If you think this is an error please DM East_Arctica#9238 on discord!");
+        throw new Error("Nie jesteś w quiz'ie!");
     }
 }
 
@@ -18,9 +18,9 @@ if (typeof jQuery == 'undefined') {
     document.getElementsByTagName('head')[0].appendChild(script);
 }
 
-let WaitTime = prompt("Please enter the number of seconds to wait before each answer.")
+let WaitTime = prompt("Wprowadź ile sekund musi minąć aby nastąpiła automatyczna odpowiedź.")
 if (Number(WaitTime) === NaN) {
-    alert("You did not enter a valid number. Reload and try again")
+    alert("Wprowadziłeś zły numer!")
     throw new Error("Invalid number");
 } else {
     WaitTime = Number(WaitTime) * 1000
